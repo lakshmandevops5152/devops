@@ -12,7 +12,7 @@ resource "aws_subnet" "Devops-2" {
   
 }
 resource "aws_subnet" "Devops-3" {
-    vpc_id = aws_vpc.demo.id
+    vpc_id = aws_vpc..id
     cidr_block = "192.168.3.0/24"
     availability_zone = "ap-south-1b"
     map_public_ip_on_launch = true
