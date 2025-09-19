@@ -11,7 +11,9 @@ pipeline {
         stage('Terraform Init') {
             steps {
                 ansiColor('xterm') {
-                    sh 'terraform init -reconfigure'
+                    dir('Dev') {   // 👈 run inside Dev folder
+                        sh 'terraform init -reconfigure'
+                    }
                 }
             }
         }
@@ -19,9 +21,11 @@ pipeline {
         stage('Terraform Plan') {
             steps {
                 ansiColor('xterm') {
-                    // Save plan and show it in console with colors
-                    sh 'terraform plan -out=tfplan'
-                    sh 'terraform show tfplan'
+                    dir('Dev') {
+                        // Save plan and show it in console with colors
+                        sh 'terraform plan -out=tfplan'
+                        sh 'terraform show tfplan'
+                    }
                 }
             }
         }
@@ -38,7 +42,9 @@ pipeline {
         stage('Terraform Apply') {
             steps {
                 ansiColor('xterm') {
-                    sh 'terraform apply -auto-approve tfplan'
+                    dir('Dev') {
+                        sh 'terraform apply -auto-approve tfplan'
+                    }
                 }
             }
         }
