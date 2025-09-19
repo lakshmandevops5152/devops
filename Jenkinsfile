@@ -11,7 +11,7 @@ pipeline {
         stage('Terraform Init') {
             steps {
                 ansiColor('xterm') {
-                    sh 'terraform init -migrate-state
+                    sh 'terraform init'
 '
                 }
             }
