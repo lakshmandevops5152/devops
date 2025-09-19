@@ -5,11 +5,11 @@ resource "aws_instance" "Jenkins" {
 }
 
     key_name = "Jenkins"
-    instance_type = "t2.medium"
+    instance_type = "t2.mmicro"
     vpc_security_group_ids = [aws_security_group.Devops-sg-1.id]
     availability_zone = "ap-south-1a"
-    disable_api_termination = true
-    subnet_id = aws_subnet.Devops_1.id
+    disable_api_termination = "true"
+    subnet_id = "aws_subnet.Devops_1.id"
 
     root_block_device {
       volume_size = "20"
