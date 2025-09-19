@@ -29,7 +29,7 @@ resource "aws_route_table" "Devops_rt" {
   }
 }
 
-resource "aws_route_table_association" "Devops-1subnet_rt_association" {
+resource "aws_route_table_association" "Devopssubnet_rt_association" {
   subnet_id      = aws_subnet.Devops_1.id
   route_table_id = aws_route_table.Devops_rt.id
 }
