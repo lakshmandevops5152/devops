@@ -8,7 +8,7 @@ resource "aws_instance" "Jenkins" {
     vpc_security_group_ids = [aws_security_group.Devops-sg-1]
     availability_zone = "ap-south-a"
     disable_api_termination = true
-    subnet_id = aws_subnet.Devops-1.id
+    subnet_id = aws_subnet.Devops_1.id
 
     root_block_device {
       volume_size = "20"
