@@ -5,7 +5,7 @@ resource "aws_instance" "Jenkins" {
 
     key_name = "Jenkins"
     instance_type = "t2.medium"
-    vpc_security_group_id = [aws_security_group.Devops-sg-1.id]
+    pc_security_group_ids = [aws_security_group.Devops-sg-1.id]
     availability_zone = "ap-south-a"
     disable_api_termination = true
     subnet_id = aws_subnet.Devops_1.id
