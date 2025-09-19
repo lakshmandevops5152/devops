@@ -9,17 +9,5 @@ resource "aws_vpc" "Devops" {
   
 }
 
-resource "aws_subnet" "Devops-1" {
-    vpc_id = aws_vpc.demo.id
-    cidr_block = "192.168.1.0/24"
-    availability_zone = "us-east-2a"
-    map_public_ip_on_launch = true
-
-    tags = {
-      Name = "Devops-1" 
-    }
-  
-}
-
 
 
