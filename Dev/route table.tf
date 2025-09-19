@@ -30,15 +30,15 @@ resource "aws_route_table" "Devops_rt" {
 }
 
 resource "aws_route_table_association" "Devops-1subnet_rt_association" {
-  subnet_id      = aws_subnet.Devops-1.id
+  subnet_id      = aws_subnet.Devops_1.id
   route_table_id = aws_route_table.Devops_rt.id
 }
 resource "aws_route_table_association" "Devops-2subnet_rt_association" {
-  subnet_id      = aws_subnet.Devops-2.id
+  subnet_id      = aws_subnet.Devops_2.id
   route_table_id = aws_route_table.Devops_rt.id
 }
 resource "aws_route_table_association" "Devops-3subnet_rt_association" {
-  subnet_id      = aws_subnet.Devops-2.id
+  subnet_id      = aws_subnet.Devops_3.id
   route_table_id = aws_route_table.Devops_rt.id
 }
 
