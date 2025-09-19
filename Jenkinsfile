@@ -12,7 +12,6 @@ pipeline {
             steps {
                 ansiColor('xterm') {
                     sh 'terraform init'
-'
                 }
             }
         }
