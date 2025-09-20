@@ -1,10 +1,10 @@
 resource "aws_security_group" "Devops-sg-1" {
-  name        = "demo_1"
+  name        = "Jenkins"
   description = "This sg for demo instance"
   vpc_id      = aws_vpc.Devops.id
 
   tags = {
-    Name = "Devops"
+    Name = "Jenkins"
   }
 }
 
