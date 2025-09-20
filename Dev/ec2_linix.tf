@@ -1,3 +1,4 @@
+/*
 resource "aws_instance" "Jenkins" {
   ami                         = "ami-01b6d88af12965bb6"
   key_name                    = "Jenkins"
@@ -22,3 +23,4 @@ resource "aws_instance" "Jenkins" {
     Env  = "Dev"
   }
 }
+*/
