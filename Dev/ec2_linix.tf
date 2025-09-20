@@ -3,7 +3,7 @@ resource "aws_instance" "Jenkins" {
   key_name                    = "Jenkins"
   instance_type               = "t2.micro"        # Fixed typo (was t2.mmicro)
   vpc_security_group_ids      = [aws_security_group.Devops-sg-1.id]
-  availability_zone           = "ap-south-1a"
+  availability_zone           = "ap-south-1b"
   disable_api_termination     = true              # Boolean, not string
   subnet_id                   = aws_subnet.Devops_1.id
 
