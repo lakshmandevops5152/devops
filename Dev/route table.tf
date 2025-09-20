@@ -2,7 +2,7 @@
 
 resource "aws_route_table_association" "demo_rt_association" {
   subnet_id      = aws_subnet.Devops_1.id
-  route_table_id = aws_route_table.demo_rt.id
+  route_table_id = aws_route_table.Devops_rt.id
 }
 
 resource "aws_route_table" "Devops_rt" {
