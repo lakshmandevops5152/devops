@@ -1,15 +1,4 @@
-resource "aws_route_table" "demo_rt" {
-  vpc_id = aws_vpc.Devops.id
 
-  route {
-    cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.Devops-igw.id
-  }
-
-  tags = {
-    Name = "example"
-  }
-}
 
 resource "aws_route_table_association" "demo_rt_association" {
   subnet_id      = aws_subnet.Devops_1.id
