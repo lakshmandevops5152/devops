@@ -15,7 +15,7 @@ resource "aws_security_group_rule" "inboud_allo_all_port" {
   to_port           = 65535
   protocol          = "tcp"
   cidr_blocks       = ["0.0.0.0/0"]
-  security_group_id = aws_security_group.demo_1.id
+  security_group_id = aws_security_group.Devops-1.id
 }
 
 resource "aws_security_group_rule" "allow_all" {
